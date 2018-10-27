@@ -8,7 +8,6 @@ version          "0.7.0"
 source_url       "https://github.com/hopshadoop/hive-chef"
 
 
-
 depends          "ndb"
 depends          "hops"
 depends          "kagent"
@@ -19,7 +18,8 @@ depends          "magic_shell"
 
 recipe           "install", "Installs a Hive2 Server"
 recipe           "default", "Starts both a Hive metastore and server2 and tez"
-recipe           "metastore", "Starts  a Hive Metastore Server"
+recipe           "metastore_db", "Configures hadoop and sets up the metastore db"
+recipe           "metastore_service", "Creates directories in HDFS and sets up the metastore service"
 recipe           "server2", "Starts  a Hive Server2"
 recipe           "tez", "Install Tez"
 recipe           "llap", "Deploy LLAP daemons"

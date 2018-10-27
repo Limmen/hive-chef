@@ -1,4 +1,5 @@
-include_recipe "hive2::metastore"
+include_recipe "hive2::metastore_db"
+include_recipe "hive2::metastore_service"
 include_recipe "hive2::cleaner"
 include_recipe "hive2::tez"
 include_recipe "hive2::server2"
