@@ -11,11 +11,12 @@ dependencies:
       - ndb::mysqld
   - recipe: hive2::metastore_service
     global:
+      - hive2::metastore_db
       - hops::nm
       - hops::dn
   - recipe: hive2::server2
     global:
-      - hive2::metastore
+      - hive2::metastore_service
   - recipe: hive2::tez
     global:
       - hops::nm
